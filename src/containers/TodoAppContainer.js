@@ -12,6 +12,7 @@ class TodoAppContainer extends Component {
 
     this.handleInput = this.handleInput.bind(this)
     this.removeTodo = this.removeTodo.bind(this)
+    this.addTodo = this.addTodo.bind(this)
   }
   
   handleInput(event) {
@@ -24,7 +25,7 @@ class TodoAppContainer extends Component {
 
   addTodo(event) {
     event.preventDefault()
-    this.props.addTodo(event.target[0].value)
+    this.props.addTodo(this.state.value)
     this.clearForm()
   }
 
